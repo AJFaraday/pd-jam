@@ -1,5 +1,5 @@
-#N canvas 3 63 579 664 10;
-#X obj 101 102 cnv 15 140 50 empty sw-disp 58.8 0 25 0 60 -233017 -66577
+#N canvas 712 54 579 664 10;
+#X obj 101 102 cnv 15 140 50 empty sw-disp 0.0 0 25 0 60 -233017 -66577
 0;
 #N canvas 331 309 620 374 timer 0;
 #X obj 83 -749 f;
