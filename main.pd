@@ -47,12 +47,6 @@
 #X connect 20 0 15 0;
 #X connect 22 0 18 0;
 #X restore 8 7 pd data;
-#X obj 36 76 s 1-up;
-#X obj 81 75 s 1-down;
-#X obj 36 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 81 55 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
 #X obj 144 75 s 1-buzz;
 #X obj 144 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -76,10 +70,7 @@
 -1;
 #X obj 272 72 s 3-buzz;
 #X obj 336 71 s 4-buzz;
-#X obj 213 166 panellist 2 Lucy Kline;
-#X obj 421 166 panellist 3 Eric Yeltsin;
-#X obj 629 166 panellist 4 Pam Aires;
-#N canvas 8 138 450 300 keys 1;
+#N canvas 8 138 450 300 keys 0;
 #X obj 8 7 key;
 #X obj 8 47 s 1-up;
 #X obj 8 27 sel 113;
@@ -143,12 +134,13 @@
 #X connect 38 0 40 0;
 #X connect 40 0 41 0;
 #X restore 64 10 pd keys;
-#X connect 3 0 1 0;
-#X connect 4 0 2 0;
-#X connect 6 0 5 0;
-#X connect 8 0 7 0;
+#X obj 213 166 panellist 2 Lucy Kline;
+#X obj 421 166 panellist 3 Eric Yeltsin;
+#X obj 629 166 panellist 4 Pam Aires;
+#X connect 2 0 1 0;
+#X connect 4 0 3 0;
+#X connect 7 0 6 0;
+#X connect 9 0 8 0;
 #X connect 11 0 10 0;
-#X connect 13 0 12 0;
-#X connect 15 0 14 0;
-#X connect 17 0 19 0;
-#X connect 18 0 20 0;
+#X connect 13 0 15 0;
+#X connect 14 0 16 0;
