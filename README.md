@@ -13,8 +13,8 @@ Controls
 
 Score tracking:
 
-space: start timer
-enter: reset game
-q - w - e - r: score up
-a - s - d - f: score down
+* space: start timer
+* enter: reset game
+* q - w - e - r: score up
+* a - s - d - f: score down
 
