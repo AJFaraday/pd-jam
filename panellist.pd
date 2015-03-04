@@ -1,4 +1,4 @@
-#N canvas 94 83 682 300 10;
+#N canvas 94 85 682 300 10;
 #X floatatom 104 143 15 0 0 0 - #0-score -;
 #X floatatom 206 143 3 0 0 0 - #1-buzz-order -;
 #X obj 103 120 cnv 15 200 20 empty \$0-canvas Frank Johnson 5 10 0
@@ -39,7 +39,7 @@
 #X connect 16 0 14 0;
 #X connect 16 0 15 0;
 #X restore 0 -10 pd init;
-#N canvas 251 254 450 371 score 0;
+#N canvas 251 255 450 371 score 0;
 #X obj 33 11 r \$1-up;
 #X obj 37 170 f;
 #X obj 69 171 +;
@@ -73,7 +73,7 @@
 #X connect 10 0 13 1;
 #X connect 11 0 10 0;
 #X restore 0 21 pd score;
-#N canvas 124 364 450 300 buzz-sound 1;
+#N canvas 124 365 450 300 buzz-sound 1;
 #X obj 53 217 dac~;
 #X obj 54 192 *~ 0.2;
 #X obj 55 168 *~;
@@ -84,10 +84,10 @@
 #X msg 181 121 \$1 10;
 #X obj 181 40 sel \$1;
 #X obj 182 19 r buzz_no;
-#X obj 35 77 square~ 440;
 #X obj 33 7 loadbang;
 #X obj 34 33 \$1;
 #X obj 36 57 * 220;
+#X obj 35 77 phasor~ 440;
 #X connect 1 0 0 0;
 #X connect 1 0 0 1;
 #X connect 2 0 1 0;
@@ -99,12 +99,12 @@
 #X connect 8 0 5 0;
 #X connect 8 0 4 0;
 #X connect 9 0 8 0;
-#X connect 10 0 2 0;
+#X connect 10 0 11 0;
 #X connect 11 0 12 0;
 #X connect 12 0 13 0;
-#X connect 13 0 10 0;
+#X connect 13 0 2 0;
 #X restore 2 47 pd buzz-sound;
-#N canvas 613 304 569 300 buzz-timer 0;
+#N canvas 613 306 569 300 buzz-timer 0;
 #X obj 41 36 r \$1-buzz;
 #X obj 40 71 s timer-stop;
 #X obj 306 4 r \$1-buzz;
@@ -115,6 +115,9 @@
 #X msg 414 72 1;
 #X obj 306 29 t b b;
 #X msg 306 51 0;
+#X obj 34 159 r \$1-buzz-order;
+#X obj 34 202 s \$1-first;
+#X obj 34 180 == 1;
 #X connect 0 0 1 0;
 #X connect 2 0 8 0;
 #X connect 3 0 5 0;
@@ -124,5 +127,35 @@
 #X connect 8 0 9 0;
 #X connect 8 1 3 0;
 #X connect 9 0 5 1;
+#X connect 10 0 12 0;
+#X connect 12 0 11 0;
 #X restore 1 70 pd buzz-timer;
+#X obj 229 143 tgl 10 0 empty \$1-first empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 239 143 tgl 10 0 empty \$1-first empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 249 143 tgl 10 0 empty \$1-first empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 259 143 tgl 10 0 empty \$1-first empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 269 143 tgl 10 0 empty \$1-first empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 279 143 tgl 10 0 empty \$1-first empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 289 143 tgl 10 0 empty \$1-first empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 229 153 tgl 10 0 empty \$1-first empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 239 153 tgl 10 0 empty \$1-first empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 249 153 tgl 10 0 empty \$1-first empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 259 153 tgl 10 0 empty \$1-first empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 269 153 tgl 10 0 empty \$1-first empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 279 153 tgl 10 0 empty \$1-first empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 289 153 tgl 10 0 empty \$1-first empty 17 7 0 10 -262144 -1
+-1 0 1;
 #X coords 0 -1 1 1 205 65 1 100 100;
