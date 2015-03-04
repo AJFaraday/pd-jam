@@ -1,0 +1,90 @@
+#N canvas 399 352 960 298 10;
+#N canvas 743 98 450 375 data 0;
+#X obj 8 9 r panelist_init;
+#X floatatom 8 59 5 0 0 0 - - -;
+#X text 45 58 < - number of panellists;
+#X obj 8 81 s panel_size;
+#X obj 235 16 table scores;
+#X obj 8 35 f;
+#X obj 35 35 + 1;
+#X obj 25 158 r buzz_no;
+#X msg 25 322 \; \$1-buzz-order \$2;
+#X obj 52 249 f;
+#X obj 83 249 + 1;
+#X obj 25 297 pack f f;
+#X obj 25 186 t f b;
+#X obj 78 190 r timer-start;
+#X msg 78 216 0;
+#X obj 198 197 until;
+#X obj 198 224 f;
+#X obj 227 224 + 1;
+#X obj 198 145 t b b;
+#X msg 243 199 1;
+#X msg 198 172 3;
+#X msg 196 250 \; \$1-buzz-order 0;
+#X obj 197 122 r timer-start;
+#X connect 0 0 5 0;
+#X connect 1 0 3 0;
+#X connect 5 0 6 0;
+#X connect 5 0 1 0;
+#X connect 6 0 5 1;
+#X connect 7 0 12 0;
+#X connect 9 0 10 0;
+#X connect 9 0 11 1;
+#X connect 10 0 9 1;
+#X connect 11 0 8 0;
+#X connect 12 0 11 0;
+#X connect 12 1 9 0;
+#X connect 13 0 14 0;
+#X connect 14 0 9 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 16 0 21 0;
+#X connect 17 0 16 1;
+#X connect 18 0 20 0;
+#X connect 18 1 19 0;
+#X connect 19 0 16 0;
+#X connect 20 0 15 0;
+#X connect 22 0 18 0;
+#X restore 8 7 pd data;
+#X obj 36 76 s 1-up;
+#X obj 81 75 s 1-down;
+#X obj 36 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 81 55 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 144 75 s 1-buzz;
+#X obj 144 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 583 77 s game-init;
+#X obj 583 47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 5 105 stop-watch;
+#X obj 665 79 s timer-start;
+#X obj 667 50 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 760 77 s timer-stop;
+#X obj 763 49 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 208 70 s 2-buzz;
+#X obj 204 45 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 5 166 panellist 1 Frank Johnson;
+#X obj 270 50 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 334 49 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 272 72 s 3-buzz;
+#X obj 336 71 s 4-buzz;
+#X obj 213 166 panellist 2 Lucy Kline;
+#X obj 421 166 panellist 3 Eric Yeltsin;
+#X obj 629 166 panellist 4 Pam Aires;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X connect 6 0 5 0;
+#X connect 8 0 7 0;
+#X connect 11 0 10 0;
+#X connect 13 0 12 0;
+#X connect 15 0 14 0;
+#X connect 17 0 19 0;
+#X connect 18 0 20 0;

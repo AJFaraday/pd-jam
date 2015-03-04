@@ -1,0 +1,4 @@
+#N canvas 3 55 579 664 36;
+#X floatatom 102 525 2 0 0 0 - seconds -;
+#X floatatom 151 525 2 0 0 0 - tents -;
+#X coords 0 -1 1 1 100 75 1 100 500;
