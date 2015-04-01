@@ -1,4 +1,4 @@
-#N canvas 94 85 682 300 10;
+#N canvas 92 86 682 300 10;
 #X floatatom 104 143 15 0 0 0 - #0-score -;
 #X floatatom 206 143 3 0 0 0 - #1-buzz-order -;
 #X obj 103 120 cnv 15 200 20 empty \$0-canvas Frank Johnson 5 10 0
@@ -73,7 +73,7 @@
 #X connect 10 0 13 1;
 #X connect 11 0 10 0;
 #X restore 0 21 pd score;
-#N canvas 124 365 450 300 buzz-sound 1;
+#N canvas 124 365 450 300 buzz-sound 0;
 #X obj 53 217 dac~;
 #X obj 54 192 *~ 0.2;
 #X obj 55 168 *~;
@@ -158,4 +158,5 @@
 -1 0 1;
 #X obj 289 153 tgl 10 0 empty \$1-first empty 17 7 0 10 -262144 -1
 -1 0 1;
+#X obj 98 -2 panellist-display \$1 \$2 \$3;
 #X coords 0 -1 1 1 205 65 1 100 100;

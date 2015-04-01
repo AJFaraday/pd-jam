@@ -1,5 +1,5 @@
-#N canvas 358 349 960 298 10;
-#N canvas 741 100 450 375 data 0;
+#N canvas 46 449 960 298 10;
+#N canvas 739 101 450 375 data 1;
 #X obj 8 9 r panelist_init;
 #X floatatom 8 59 5 0 0 0 - - -;
 #X text 45 58 < - number of panellists;
@@ -23,6 +23,8 @@
 #X msg 198 172 3;
 #X msg 196 250 \; \$1-buzz-order 0;
 #X obj 197 122 r timer-start;
+#X floatatom 86 272 5 0 0 0 - - -;
+#X obj 86 297 s buzz_count;
 #X connect 0 0 5 0;
 #X connect 1 0 3 0;
 #X connect 5 0 6 0;
@@ -31,6 +33,7 @@
 #X connect 7 0 12 0;
 #X connect 9 0 10 0;
 #X connect 9 0 11 1;
+#X connect 9 0 23 0;
 #X connect 10 0 9 1;
 #X connect 11 0 8 0;
 #X connect 12 0 11 0;
@@ -46,6 +49,7 @@
 #X connect 19 0 16 0;
 #X connect 20 0 15 0;
 #X connect 22 0 18 0;
+#X connect 23 0 24 0;
 #X restore 8 7 pd data;
 #X obj 170 68 s 1-buzz;
 #X obj 170 34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -146,9 +150,6 @@
 #X connect 46 0 48 0;
 #X connect 48 0 47 0;
 #X restore 64 10 pd keys;
-#X obj 213 166 panellist 2 Lucy Kline;
-#X obj 421 166 panellist 3 Eric Yeltsin;
-#X obj 629 166 panellist 4 Pam Aires;
 #X obj 4 96 topic;
 #X obj 452 56 s file-load;
 #X obj 530 52 s next-topic;
@@ -162,6 +163,10 @@
 #X obj 95 274 s end-gem;
 #X obj 95 249 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+#X obj 121 12 display;
+#X obj 213 166 panellist 2 Lucy Kline;
+#X obj 421 166 panellist 3 Eric Yeltsin;
+#X obj 629 166 panellist 4 Pam Aires;
 #X connect 2 0 1 0;
 #X connect 4 0 3 0;
 #X connect 7 0 6 0;
@@ -169,7 +174,7 @@
 #X connect 11 0 10 0;
 #X connect 13 0 15 0;
 #X connect 14 0 16 0;
-#X connect 24 0 22 0;
-#X connect 25 0 23 0;
-#X connect 27 0 26 0;
-#X connect 29 0 28 0;
+#X connect 21 0 19 0;
+#X connect 22 0 20 0;
+#X connect 24 0 23 0;
+#X connect 26 0 25 0;

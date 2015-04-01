@@ -1,4 +1,4 @@
-#N canvas 343 79 450 300 10;
+#N canvas 341 80 450 300 10;
 #N canvas 64 204 450 399 gemwin 1;
 #X obj 37 287 gemwin;
 #X msg 37 48 create \, 1;
@@ -11,14 +11,22 @@
 #X msg 64 252 dimen \$1 \$2;
 #X obj 64 194 f;
 #X obj 109 193 f;
-#X obj 189 11 loadbang;
-#X msg 221 37 384;
-#X msg 189 37 683;
-#X obj 221 84 s win-y;
-#X obj 189 63 s win-x;
+#X obj 189 38 loadbang;
+#X msg 221 64 384;
+#X msg 189 64 683;
+#X obj 221 111 s win-y;
+#X obj 189 90 s win-x;
 #X obj 79 142 r win-x;
 #X obj 124 168 r win-y;
 #X obj 64 79 t b b;
+#X obj 325 112 s win-y;
+#X obj 293 91 s win-x;
+#X text 171 9 quarter of screen;
+#X text 294 11 Full screen;
+#X msg 293 65 1366;
+#X msg 325 65 768;
+#X obj 293 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X connect 2 1 18 0;
@@ -38,6 +46,10 @@
 #X connect 17 0 10 1;
 #X connect 18 0 9 0;
 #X connect 18 1 10 0;
+#X connect 23 0 20 0;
+#X connect 24 0 19 0;
+#X connect 25 0 23 0;
+#X connect 25 0 24 0;
 #X restore 26 24 pd gemwin;
 #N canvas 503 287 450 419 timer-display 0;
 #X obj 49 147 gemhead;
@@ -67,7 +79,7 @@
 #X connect 11 0 2 1;
 #X connect 12 0 1 0;
 #X restore 28 60 pd timer-display;
-#N canvas 496 390 450 300 topic-display 1;
+#N canvas 496 390 450 300 topic-display 0;
 #X obj 43 50 gemhead;
 #X obj 43 127 colourRGB 1 1 1;
 #X obj 43 260 text2d;
