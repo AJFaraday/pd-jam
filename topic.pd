@@ -1,7 +1,7 @@
-#N canvas 1 79 1089 300 10;
-#X obj 102 102 cnv 15 895 60 empty topic-canvas my_favourite_language
+#N canvas 1 81 1089 300 10;
+#X obj 102 102 cnv 15 895 60 empty topic-canvas this really rather long topic
 20 30 0 50 -233017 -66577 0;
-#N canvas 23 389 580 300 file-reader 1;
+#N canvas 19 391 580 300 file-reader 0;
 #X obj 31 7 loadbang;
 #X obj 34 99 s file-in;
 #X obj 54 177 r file-in;
@@ -18,10 +18,12 @@
 #X msg 34 65 rewind;
 #X obj 94 6 r file-load;
 #X obj 350 21 r next-topic;
-#X msg 273 256 \; topic-canvas vis_size 895 60;
-#X obj 273 129 loadbang;
-#X msg 289 232 \; topic-canvas label_font 0 50;
-#X msg 367 171;
+#X msg 352 160 \; topic-canvas vis_size 895 60;
+#X obj 352 96 loadbang;
+#X msg 368 120 \; topic-canvas label_font 0 50;
+#X msg 216 251 text \$1;
+#X obj 216 231 l2s;
+#X obj 216 271 s topic-disp;
 #X connect 0 0 12 0;
 #X connect 2 0 8 0;
 #X connect 5 0 4 0;
@@ -29,6 +31,7 @@
 #X connect 7 0 4 0;
 #X connect 8 0 3 0;
 #X connect 8 0 10 0;
+#X connect 8 0 20 0;
 #X connect 9 0 11 0;
 #X connect 10 0 9 0;
 #X connect 12 0 13 0;
@@ -38,5 +41,7 @@
 #X connect 15 0 5 0;
 #X connect 17 0 16 0;
 #X connect 17 0 18 0;
+#X connect 19 0 21 0;
+#X connect 20 0 19 0;
 #X restore 15 13 pd file-reader;
 #X coords 0 -1 1 1 900 64 1 100 100;
