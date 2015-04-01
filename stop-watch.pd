@@ -1,7 +1,7 @@
-#N canvas 712 54 579 664 10;
-#X obj 101 102 cnv 15 140 50 empty sw-disp 0.0 0 25 0 60 -233017 -66577
+#N canvas 710 79 579 664 10;
+#X obj 101 102 cnv 15 140 50 empty sw-disp 60.0 0 25 0 60 -233017 -66577
 0;
-#N canvas 331 309 620 374 timer 0;
+#N canvas 329 310 620 374 timer 0;
 #X obj 83 -749 f;
 #X obj 164 -836 f;
 #X obj 83 -780 sel 0;
@@ -67,6 +67,22 @@
 #X obj 64 215 b;
 #X obj 44 290 zexy/makesymbol %s.%s;
 #X obj 43 339 s sw-disp;
+#N canvas 60 223 450 300 round-end-sound 0;
+#X obj 25 68 soundfiler;
+#X obj 84 18 table end-sample;
+#X obj 25 18 loadbang;
+#X msg 25 42 read -resize sound/air-horn.wav end-sample;
+#X obj 24 99 r timer-stop;
+#X obj 24 122 tabplay~ end-sample;
+#X obj 24 177 dac~;
+#X obj 24 145 *~ 0.4;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 7 0 6 0;
+#X connect 7 0 6 1;
+#X restore 386 73 pd round-end-sound;
 #X connect 2 0 6 0;
 #X connect 3 0 5 1;
 #X connect 3 0 7 0;
