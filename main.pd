@@ -1,5 +1,5 @@
-#N canvas 46 449 960 298 10;
-#N canvas 134 127 450 375 data 1;
+#N canvas 44 450 960 298 10;
+#N canvas 132 128 450 375 data 0;
 #X obj 8 9 r panelist_init;
 #X floatatom 8 59 5 0 0 0 - - -;
 #X text 45 58 < - number of panellists;
