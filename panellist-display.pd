@@ -1,9 +1,9 @@
-#N canvas 1 82 685 455 10;
+#N canvas 1 85 685 455 10;
 #X obj 36 104 gemhead;
 #X obj 36 209 circle 1 20;
 #X obj 36 179 translateXYZ 0 -2 0;
 #X obj 73 149 r \$0-x;
-#X obj 598 160 s \$0-x;
+#X obj 598 223 s \$0-x;
 #X obj 598 25 \$1;
 #X obj 598 1 loadbang;
 #X obj 578 2 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -64,8 +64,7 @@
 #X restore 203 62 pd no-disp;
 #X obj 598 48 - 1;
 #X obj 598 74 / 4;
-#X obj 598 96 * 14;
-#X obj 598 120 - 5.2;
+#X obj 598 159 * 14;
 #X text 577 -28 generates;
 #X text 560 -16 center position;
 #X obj 36 128 colourRGB 1 0 0;
@@ -111,7 +110,7 @@
 #X connect 18 0 3 0;
 #X connect 19 0 0 1;
 #X restore 204 108 pd first-name-display;
-#N canvas 178 384 450 300 last-name-display 1;
+#N canvas 178 384 450 300 last-name-display 0;
 #X obj 46 238 text2d;
 #X obj 79 178 r win-y;
 #X obj 79 198 f;
@@ -155,7 +154,7 @@
 #X restore 204 129 pd last-name-display;
 #X obj 37 51 r \$1-buzz-order;
 #X obj 37 73 > 0;
-#N canvas 45 378 521 353 score 1;
+#N canvas 45 378 521 353 score 0;
 #X obj 56 248 text2d;
 #X obj 89 188 r win-y;
 #X obj 89 208 f;
@@ -195,16 +194,21 @@
 #X connect 17 0 3 0;
 #X connect 18 0 15 0;
 #X restore 202 156 pd score;
-#X connect 0 0 15 0;
+#X obj 598 99 * -1;
+#X obj 598 124 + 1;
+#X obj 598 183 - 8.7;
+#X connect 0 0 14 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 1;
 #X connect 5 0 9 0;
 #X connect 6 0 5 0;
 #X connect 7 0 5 0;
 #X connect 9 0 10 0;
-#X connect 10 0 11 0;
-#X connect 11 0 12 0;
-#X connect 12 0 4 0;
-#X connect 15 0 2 0;
-#X connect 18 0 19 0;
-#X connect 19 0 0 0;
+#X connect 10 0 20 0;
+#X connect 11 0 22 0;
+#X connect 14 0 2 0;
+#X connect 17 0 18 0;
+#X connect 18 0 0 0;
+#X connect 20 0 21 0;
+#X connect 21 0 11 0;
+#X connect 22 0 4 0;
