@@ -1,4 +1,4 @@
-#N canvas 399 354 960 298 10;
+#N canvas 397 355 960 298 10;
 #N canvas 743 99 450 375 data 0;
 #X obj 8 9 r panelist_init;
 #X floatatom 8 59 5 0 0 0 - - -;
@@ -70,7 +70,7 @@
 -1;
 #X obj 298 65 s 3-buzz;
 #X obj 362 64 s 4-buzz;
-#N canvas 8 140 595 360 keys 0;
+#N canvas 6 141 595 360 keys 0;
 #X obj 8 7 key;
 #X obj 8 47 s 1-up;
 #X obj 8 27 sel 113;
