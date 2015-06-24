@@ -1,4 +1,4 @@
-#N canvas 383 337 960 327 10;
+#N canvas 337 89 960 327 10;
 #N canvas 132 128 450 375 data 0;
 #X obj 8 9 r panelist_init;
 #X floatatom 8 59 5 0 0 0 - - -;
@@ -73,7 +73,7 @@
 -1;
 #X obj 298 65 s 3-buzz;
 #X obj 362 64 s 4-buzz;
-#N canvas 2 143 595 360 keys 0;
+#N canvas 1 144 595 360 keys 0;
 #X obj 8 7 key;
 #X obj 8 47 s 1-up;
 #X obj 8 27 sel 113;
@@ -171,6 +171,7 @@
 #X obj 214 166 panellist 2 Kinsey Durham Ann;
 #X msg 839 195 loadbang;
 #X obj 839 221 s main.pd;
+#X obj 176 12 controllers;
 #X connect 2 0 1 0;
 #X connect 4 0 3 0;
 #X connect 7 0 6 0;
