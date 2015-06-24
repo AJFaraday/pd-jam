@@ -1,4 +1,8 @@
-topic one;
-this really rather long topic;
-concurrency;
-my favourite language;
+Information security;
+Don't Repeat Yourself;
+Single page web apps;
+Running a meetup;
+Single Responsibility Principal;
+Design patterns;
+Learning Ruby;
+Ruby on Rails
