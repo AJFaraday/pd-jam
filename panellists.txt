@@ -1,0 +1,7 @@
+Phil Nash: Product evangelist for Twilio, worked on many OS projects including powder and bitly.
+
+Rob Miller: Operations director for Big Fish, Author of Text Processing in Ruby
+
+Kinsey Ann Durham: From Denver, engineer at GoSpotCheck, co-founder of Kubmo and on the board of BridgeFoundry
+
+Sam Phippen: Developer at FunAndPlausible and member of the RSpec core team

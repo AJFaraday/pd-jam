@@ -1,4 +1,4 @@
-#N canvas 333 91 960 387 10;
+#N canvas 322 380 960 387 10;
 #N canvas 130 129 450 375 data 0;
 #X obj 8 9 r panelist_init;
 #X floatatom 8 59 5 0 0 0 - - -;
