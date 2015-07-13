@@ -1,3 +1,4 @@
+Just a Ruby Minute;
 Information security;
 Don't Repeat Yourself;
 Single page web apps;
