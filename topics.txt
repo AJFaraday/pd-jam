@@ -1,9 +1,17 @@
 Just a Ruby Minute;
 Information security;
 Don't Repeat Yourself;
+Learning Ruby;
+My worst mistake;
+My favourite text editor;
+Ruby on Rails;
+If I wasn't a Coder;
 Single page web apps;
+Pairing;
+The worst code I've ever seen;
 Running a meetup;
+Software as a Service;
 Single Responsibility Principal;
 Design patterns;
-Learning Ruby;
-Ruby on Rails
+
+
