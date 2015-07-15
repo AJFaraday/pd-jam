@@ -1,0 +1,15 @@
+Just a Ruby Minute;
+Information security;
+Single Responsibility Principal;
+Software as a Service;
+Ruby on Rails;
+Single page web apps;
+My favourite text editor;
+Building a tech community;
+Pairing;
+If I wasn't a Coder;
+The worst code I've ever seen;
+Design patterns;
+My worst mistake;
+Don't Repeat Yourself;
+Learning to code;

@@ -1,5 +1,5 @@
-#N canvas 322 380 960 387 10;
-#N canvas 130 129 450 375 data 0;
+#N canvas 320 380 960 387 10;
+#N canvas 128 130 450 375 data 0;
 #X obj 8 9 r panelist_init;
 #X floatatom 8 59 5 0 0 0 - - -;
 #X text 45 58 < - number of panellists;
@@ -54,15 +54,15 @@
 #X obj 170 68 s 1-buzz;
 #X obj 170 34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 649 50 s game-init;
-#X obj 649 20 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 693 51 s game-init;
+#X obj 693 21 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 7 34 stop-watch;
-#X obj 731 52 s timer-start;
-#X obj 733 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 775 53 s timer-start;
+#X obj 777 24 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 826 50 s timer-stop;
-#X obj 829 22 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 870 51 s timer-stop;
+#X obj 873 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 234 63 s 2-buzz;
 #X obj 230 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -73,7 +73,7 @@
 -1;
 #X obj 298 65 s 3-buzz;
 #X obj 362 64 s 4-buzz;
-#N canvas 1 146 595 360 keys 0;
+#N canvas 1 147 595 360 keys 0;
 #X obj 8 7 key;
 #X obj 8 47 s 1-up;
 #X obj 8 27 sel 113;
@@ -183,6 +183,9 @@
 #X text 746 249 Start;
 #X text 768 275 Fade;
 #X obj 719 303 theme;
+#X obj 558 29 s practise-file-load;
+#X obj 559 6 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 2 0 1 0;
 #X connect 4 0 3 0;
 #X connect 7 0 6 0;
@@ -197,3 +200,4 @@
 #X connect 31 0 32 0;
 #X connect 34 0 38 0;
 #X connect 35 0 38 1;
+#X connect 40 0 39 0;
